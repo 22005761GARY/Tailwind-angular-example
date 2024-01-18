@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class AppComponent {
-  title = 'tailwind-angular-example';
+export class AboutComponent {
 
   user?: string;
 
   ngOnInit(): void {
     this.user = localStorage.getItem('user')!;
   }
+
 
   barClickEvent() {
     const menu = document.getElementById('menu');
@@ -33,5 +33,4 @@ export class AppComponent {
       profile?.classList.add('hidden');
     }
   }
-
 }
